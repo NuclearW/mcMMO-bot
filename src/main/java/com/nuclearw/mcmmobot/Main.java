@@ -2,6 +2,8 @@ package com.nuclearw.mcmmobot;
 
 import java.util.HashMap;
 
+import org.jibble.pircbot.TrustingSSLSocketFactory;
+
 import com.nuclearw.mcmmobot.commands.*;
 
 public class Main {
@@ -13,7 +15,8 @@ public class Main {
 		Config.load();
 
 		bot = new Bot();
-		bot.connect(Config.host, Config.port, Config.password);
+		bot.setVerbose(true);
+		bot.connect(Config.host, Config.port, Config.password, new TrustingSSLSocketFactory());
 		for(String channel : Config.channels) {
 			bot.joinChannel(channel);
 		}

@@ -1,5 +1,6 @@
 package com.nuclearw.mcmmobot;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Config {
@@ -11,10 +12,10 @@ public class Config {
 
 	public static int port;
 
-	public static boolean diffEnabled;
+	public static boolean ssl, diffEnabled;
 
 	public static void load() {
 		// TODO: Load
-		gitHubBase = "https://github.com/" + gitHubOwner + "/" + gitHubBase + "/";
+		gitHubBase = "https://github.com/" + gitHubOwner + "/" + gitHubProject + "/";
 	}
 }
