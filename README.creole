@@ -1,0 +1,7 @@
+== mcMMO-bot
+
+mcMMO-bot is an IRC bot for various functions on the #mcmmo channel on the Esper network.
+
+=== Compiling
+
+Maven 3 is required to compile mcMMO-bot
