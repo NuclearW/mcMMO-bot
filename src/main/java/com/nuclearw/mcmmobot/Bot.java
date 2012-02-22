@@ -33,9 +33,9 @@ public class Bot extends PircBot {
 		Command command = Main.getCommand(commandName);
 		if(command == null) return;
 
-		boolean printUsage = command.onCommand(channel, sender, args);
+		boolean usedProperly = command.onCommand(channel, sender, args);
 
-		if(printUsage) {
+		if(!usedProperly) {
 			this.sendMessage(channel, sender + ", correct usage is: " + command.getUsage());
 		}
 	}
